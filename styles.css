@@ -1,0 +1,197 @@
+/* ---------------- RESET ASAS ---------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------------- GAYA UMUM ---------------- */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+/* ---------------- NAVIGASI ---------------- */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #555;
+}
+
+/* ---------------- BAHAGIAN UTAMA ---------------- */
+main {
+  padding: 40px 20px;
+  text-align: center;
+  min-height: 80vh; /* supaya footer fixed tidak menutup isi */
+}
+
+main section h2 {
+  font-size: 24px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* Gaya untuk gambar di halaman index supaya tidak terlalu besar */
+main section img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* ---------------- FORM ---------------- */
+form {
+  background-color: #fff;
+  padding: 30px;
+  max-width: 700px;
+  margin: 40px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: left;
+  font-size: 16px;
+}
+
+/* Tajuk borang */
+form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 28px;
+}
+
+/* Label dan input */
+form label {
+  display: block;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="password"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+
+/* Baris dua lajur */
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Radio dan checkbox sebaris */
+.inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* lebih jarak antara pilihan */
+  margin-bottom: 15px;
+  align-items: center;
+  justify-content: center; /* tengah horizontal */
+}
+
+.inline label {
+  font-size: 16px;
+  user-select: none; /* elak label terpilih tidak sengaja */
+  padding-right: 10px;
+  white-space: nowrap; /* elak label pecah ke baris baru */
+}
+
+/* Fieldset gaya */
+fieldset {
+  border: 1px solid #ccc;
+  padding: 15px 20px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+legend {
+  font-weight: bold;
+  color: #555;
+  padding: 0 5px;
+}
+
+/* Butang */
+.button-group {
+  margin-top: 20px;
+  text-align: right;
+}
+
+form input[type="submit"],
+form input[type="reset"] {
+  padding: 10px 25px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover,
+form input[type="reset"]:hover {
+  background-color: #555;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  font-size: 16px;
+  user-select: none;
+}

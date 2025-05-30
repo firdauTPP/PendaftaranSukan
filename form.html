@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>USER FORM</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>BORANG PEMILIHAN SUKAN</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="#" class="active">FORM</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <form action="index.html" method="get">
+        <h2>FORM</h2>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">FIRST NAME</label>
+            <input type="text" id="fname" name="fname">
+          </div>
+
+          <div class="form-group">
+            <label for="ndp">NDP</label>
+            <input type="text" id="ndp" name="ndp">
+          </div>
+        </div>
+
+        <fieldset>
+          <legend>GENDER</legend>
+          <div class="inline">
+            <input type="radio" name="gender" value="male" id="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" value="female" id="female">
+            <label for="female">Female</label>
+          </div>
+        </fieldset>
+
+        <label for="address">ADDRESS</label>
+        <textarea id="address" name="address" rows="4"></textarea>
+
+        <label>D.O.B</label>
+        <div class="form-row">
+          <select name="dob-month">
+            <option>Jan</option>
+            <option>Feb</option>
+            <option>Mar</option>
+          </select>
+          <select name="dob-day">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+          <select name="dob-year">
+            <option>1990</option>
+            <option>1991</option>
+            <option>1992</option>
+          </select>
+        </div>
+
+        <fieldset>
+          <legend>SELECT GAME</legend>
+          <div class="inline">
+            <input type="radio" name="games" value="badminton" id="badminton">
+            <label for="badminton">Badminton</label>
+
+            <input type="radio" name="games" value="football" id="football">
+            <label for="football">Football</label>
+
+            <input type="radio" name="games" value="pingpong" id="pingpong">
+            <label for="cricket">Pingpong</label>
+
+            <input type="radio" name="games" value="volleyball" id="volleyball">
+            <label for="volleyball">VolleyBall</label>
+
+            <input type="radio" name="games" value="mobile legends" id="mobile legends">
+            <label for="mobile legends">Mobile Legends</label>
+          </div>
+        </fieldset>
+
+        <label for="kos">KOS</label>
+        <select id="kos" name="kos">
+          <option>TPP</option>
+          <option>TPM</option>
+          <option>TKR</option>
+          <option>CADD</option>
+        </select>
+
+        <div class="button-group">
+          <input type="submit" value="Submit">
+          <input type="reset" value="Reset">
+        </div>
+
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Laman Utama</p>
+  </footer>
+
+</body>
+</html>
