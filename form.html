@@ -1,59 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FORM</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-
-  <header class="bg-primary text-white py-3">
-    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
-      <h1 class="h3 mb-2 mb-md-0">BORANG PEMILIHAN SUKAN</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>USER FORM</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>BORANG PEMILIHAN SUKAN</h1>
       <nav>
-        <ul class="nav">
-          <li class="nav-item">
-            <a href="index.html" class="nav-link text-white">HOME</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link active text-white">FORM</a>
-          </li>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="#" class="active">FORM</a></li>
         </ul>
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <main class="container my-5">
-    <h2 class="text-center mb-4">Isi Maklumat Anda</h2>
-    <form>
-      <div class="mb-3">
-        <label for="nama" class="form-label">Nama Penuh</label>
-        <input type="text" class="form-control" id="nama" required />
-      </div>
-      <div class="mb-3">
-        <label for="id" class="form-label">ID Pelajar</label>
-        <input type="text" class="form-control" id="id" required />
-      </div>
-      <div class="mb-3">
-        <label for="sukan" class="form-label">Pilih Sukan</label>
-        <select class="form-select" id="sukan">
-          <option>Bola Sepak</option>
-          <option>Badminton</option>
-          <option>Sepak Takraw</option>
-          <option>Ping Pong</option>
-        </select>
-      </div>
-      <button type="submit" class="btn btn-success">Hantar</button>
-    </form>
-  </main>
+    <main>
+      <section>
+        <form action="index.html" method="get">
+          <h2>FORM</h2>
 
-  <footer class="bg-dark text-white text-center py-3 mt-5">
-    <p class="mb-0">&copy; 2025 Borang Pemilihan Sukan</p>
-  </footer>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">FIRST NAME</label>
+              <input type="text" id="fname" name="fname" />
+            </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+            <div class="form-group">
+              <label for="ndp">NDP</label>
+              <input type="text" id="ndp" name="ndp" />
+            </div>
+          </div>
+
+          <fieldset>
+            <legend>GENDER</legend>
+            <div class="inline">
+              <input type="radio" name="gender" value="male" id="male" />
+              <label for="male">Male</label>
+              <input type="radio" name="gender" value="female" id="female" />
+              <label for="female">Female</label>
+            </div>
+          </fieldset>
+
+          <label for="address">ADDRESS</label>
+          <textarea id="address" name="address" rows="4"></textarea>
+
+          <label>D.O.B</label>
+          <div class="form-row">
+            <select name="dob-month">
+              <option>Jan</option>
+              <option>Feb</option>
+              <option>Mar</option>
+            </select>
+            <select name="dob-day">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
+            <select name="dob-year">
+              <option>1990</option>
+              <option>1991</option>
+              <option>1992</option>
+            </select>
+          </div>
+
+          <fieldset>
+            <legend>SELECT GAME</legend>
+            <div class="inline">
+              <input
+                type="radio"
+                name="games"
+                value="badminton"
+                id="badminton"
+              />
+              <label for="badminton">Badminton</label>
+
+              <input type="radio" name="games" value="football" id="football" />
+              <label for="football">Football</label>
+
+              <input type="radio" name="games" value="pingpong" id="pingpong" />
+              <label for="cricket">Pingpong</label>
+
+              <input
+                type="radio"
+                name="games"
+                value="volleyball"
+                id="volleyball"
+              />
+              <label for="volleyball">VolleyBall</label>
+
+              <input
+                type="radio"
+                name="games"
+                value="mobile legends"
+                id="mobile legends"
+              />
+              <label for="mobile legends">Mobile Legends</label>
+            </div>
+          </fieldset>
+
+          <label for="kos">KOS</label>
+          <select id="kos" name="kos">
+            <option>TPP</option>
+            <option>TPM</option>
+            <option>TKR</option>
+            <option>CADD</option>
+          </select>
+
+          <div class="button-group">
+            <input type="submit" value="Submit" />
+            <input type="reset" value="Reset" id="resetBtn" />
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Laman Utama</p>
+    </footer>
+
+    <script>
+      // Cari butang reset dan form
+      const resetBtn = document.getElementById("resetBtn");
+      const form = document.getElementById("userForm");
+
+      // Tambah event listener untuk "reset" button
+      resetBtn.addEventListener("click", function (event) {
+        const confirmReset = confirm(
+          "Adakah anda pasti mahu mengosongkan borang ini?"
+        );
+        if (!confirmReset) {
+          event.preventDefault(); // Halang reset jika tekan "Batal"
+        }
+      });
+    </script>
+  </body>
 </html>
